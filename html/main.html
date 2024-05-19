@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word's games</title>
+    <link href="../css/main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <h3>איזור אישי<i class="fa-solid fa-user"></i></h3>
+    <i id="list" class="fa-sharp fa-solid fa-bars"></i>
+    
+    <ul>
+        <li id="creatList">צור חשבון</li>
+        <li id="enteranceList">כניסה </li>
+        <li id="disConectList">התנתקות </li>
+    </ul>
+    <form action="">
+        <div id="form">
+            <div id="together"><button id="logIn" type="button">התחבר</button>
+            <button id="signUp" type="button">הירשם</button></div>
+            <div id="divSignUp">
+                <div class='bold-line'></div>
+                <div class='container'>
+                    <div class='window'>
+                        <div class='overlay'></div>
+                        <div class='content'>
+                            <div class='welcome'>ברוך הבא</div>
+                            <div class='subtitle'>כדי להתחיל לשחק בפעם הראשונה עליך להירשם למערכת</div>
+                            <div class='input-fields'>
+                                <input type='text' placeholder='שם משתמש' id="newName" class='input-line full-width'
+                                    required autocomplete></input>
+                                <input type='email' placeholder='אימייל' id="newEmail" class='input-line full-width'
+                                    required autocomplete></input>
+                                <input type='password' placeholder='סיסמא' id="newPassword"
+                                    class='input-line full-width' required autocomplete></input>
+                            </div>
+                            <div class='spacing'></span></div>
+                            <div><button id="creatSignUp" type="submit" class='ghost-round full-width'>ליצירת
+                                    חשבון</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="divLogIn">
+                <div class='bold-line'></div>
+                <div class='container'>
+                    <div class='window'>
+                        <div class='overlay'></div>
+                        <div class='content'>
+                            <div class='welcome'>ברוך הבא</div>
+                            <div class='subtitle'>כדי להתחבר למערכת, עליך להזין שם משתמש וסיסמא</div>
+                            <div class='input-fields'>
+                                <input type='text' placeholder='שם משתמש' id="name" class='input-line full-width'
+                                    required autocomplete></input>
+                                <input type='password' placeholder='סיסמא' id="password" class='input-line full-width'
+                                    required autocomplete></input>
+                            </div>
+                            <div class='spacing'></span></div>
+                            <div><button id="creatLogIn" type="submit" class='ghost-round full-width'>כניסה
+                                    למערכת</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+<i ></i>
+    <img src="../images/bacckRoundMain.png" alt="" id="opaenImg">
+    <h4 id="heloUser"></h4>
+    <div id="games">
+
+        <div class="allGames"><a href="../html/game1.html"> <i id="icon1" class="fa-regular fa-circle-play"></i></a>
+            <p id="name1">דומינו מילים</p><img src="../images/domino.png" alt="" id="game1">
+        </div>
+        <div class="allGames"><a href="../html/realGame2.html"><i id="icon2" class="fa-regular fa-circle-play"></i></a>
+            <p id="name2">עץ המילים</p><img src="../images/treeYellow.png" alt="" id="game2">
+        </div>
+        <div class="allGames"> <a href="../html/game3.html"><i id="icon3" class="fa-regular fa-circle-play"></i></a>
+            <p id="name3">חי צומח דומם</p><img src="../images/animols.png" id="game3">
+        </div>
+        <div class="allGames"> <a href="../html/game4.html"><i id="icon4" class="fa-regular fa-circle-play"></i></a>
+            <p id="name4">הרכבת מילים</p><img src="../images/cars.png" alt="" id="game4">
+        </div>
+    </div>
+    <a href="https://www.instagram.com"><i class="fa-solid fa-thumbs-up"></i><i class="fa-solid fa-share-nodes"></i></a>
+    <script src="../java script/main.js"></script>
+
+</body>
+
+</html>

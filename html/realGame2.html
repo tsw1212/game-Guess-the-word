@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/realGame2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/favicons/favicon (7).ico">
+    <title>Word's game</title>
+</head>
+
+<body>
+    <div id="instractions">
+        <h2>הוראות הפעלה למשחק<br></h2>
+        <ul>
+            <li>במשחק זה עליך לנחש את המילה התלויה על העץ.</li>
+            <li>בכל פעם שתבחר אות נכונה, היא תופיעה במקומה המתאים במילה.</li>
+            <li>בכל פעם שתבחר באות לא נכונה, יפול תפוז מהעץ.</li>
+            <li>שים לב! יש ברשותך 7 תפוזים, אם הם יגמרו, או שהטיימר יסתיים תגמר המילה.</li>
+            <li>במשחק יש 3 רמות קושי, עליך לבחור במה אתה רוצה להתחיל:<br>קל- מילים מקטגוריית פרטי לבוש.<br> בינוני- מילים
+                מקטגוריית מאכלים. <br>קשה - מילים מקטגוריית תופעות טבע.</li>
+                <li>כל שלב מכיל 8 מילים. אם הצלחת יותר מ4 מילים ניצחת!!!</li>
+                <li>באפשרותך להשתמש בלחצן עזרה רק פעם אחת במילה</li>
+        </ul>
+        <div id="levels">
+            <botton id="level1" class="level" data-level="1">קל</botton>
+            <botton id="level2" class="level" data-level="2">בינוני</botton>
+            <botton id="level3" class="level" data-level="3">קשה</botton>
+        </div>
+    </div>
+    <h3 id="nameUser"></h3>
+    <a href="../html/main.html"><img id="home" src="../images/home_FILL0_wght300_GRAD0_opsz48.png"> </a>
+    <i data-flag="false" class="fa-solid fa-comments-question"></i>
+    <div id="word"></div>
+   
+    <button class="btn" id="clue"  data-flag="false">רמז <i class="fa-solid fa-circle-question"></i></button>
+    <button id="btnInstractions" class="btn"> <i class="fa-solid fa-bars-staggered"></i>הוראות המשחק </button>
+    <div id="score" class="btn"> עד כה ניחשת בהצלחה <h4 id="countWordsFrom10"></h4>מילים</div>
+    <div id="timmerDiv" class="btn"><i class="fa-solid fa-hourglass-half"></i><h4 id="timmer"></h4></div>
+    <div id="thisLevel" class="btn"><i class="fa-solid fa-magnifying-glass"></i>בחרת קטגוריית:<h4 id="hThisLevel">
+            </h4></div>
+
+            <div id="fruit"></div>
+            <div id="bottonNewWord">
+                <button id="newWord" class="btn">מילה חדשה</button>
+            </div>
+
+            <section id="letters">
+                <button class="letter" data-value="א" data-flag="false">א</button>
+                <button class="letter" data-value="ב" data-flag="false">ב</button>
+                <button class="letter" data-value="ג" data-flag="false">ג</button>
+                <button class="letter" data-value="ד" data-flag="false">ד</button>
+                <button class="letter" data-value="ה" data-flag="false">ה</button>
+                <button class="letter" data-value="ו" data-flag="false">ו</button>
+                <button class="letter" data-value="ז" data-flag="false">ז</button>
+                <button class="letter" data-value="ח" data-flag="false">ח</button>
+                <button class="letter" data-value="ט" data-flag="false">ט</button>
+                <button class="letter" data-value="י" data-flag="false">י</button>
+                <button class="letter" data-value="כ" data-flag="false">כ</button>
+                <button class="letter" data-value="ל" data-flag="false">ל</button>
+                <button class="letter" data-value="מ" data-flag="false">מ</button>
+                <button class="letter" data-value="ם" data-flag="false">ם</button>
+                <button class="letter" data-value="נ" data-flag="false">נ</button>
+                <button class="letter" data-value="ן" data-flag="false">ן</button>
+                <button class="letter" data-value="ס" data-flag="false">ס</button>
+                <button class="letter" data-value="ע" data-flag="false">ע</button>
+                <button class="letter" data-value="פ" data-flag="false">פ</button>
+                <button class="letter" data-value="ף" data-flag="false">ף</button>
+                <button class="letter" data-value="צ" data-flag="false">צ</button>
+                <button class="letter" data-value="ץ" data-flag="false">ץ</button>
+                <button class="letter" data-value="ק" data-flag="false">ק</button>
+                <button class="letter" data-value="ר" data-flag="false">ר</button>
+                <button class="letter" data-value="ש" data-flag="false">ש</button>
+                <button class="letter" data-value="ת" data-flag="false">ת</button>
+            </section>
+
+            <div id="finishLevel">
+               <img src="../images/win.gif"  class="videoFinishLevel" id="videoWin" >
+    
+            </video>
+            <video  class="videoFinishLevel" id="videoGameOver" muted autoplay loop>
+                <source src="../video/Game Over.mp4" type="video/mp4">
+    
+            </video>
+                <div id="texts"><p id="massageToYou"></p>
+                    <p id="massageScore"></p>
+                </div>
+                <div id="levelsFinish">
+                    <botton id="level1Finish" class="level" data-level="1">קל</botton>
+                    <botton id="level2Finish" class="level" data-level="2">בינוני</botton>
+                    <botton id="level3Finish" class="level" data-level="3">קשה</botton>
+                </div>
+            </div>
+            <div id="popFruits">
+                <img id="pop1" class="allPops" src="../images/pop.png" >
+                <img id="pop2" class="allPops" src="../images/pop.png" >
+                <img id="pop3" class="allPops" src="../images/pop.png" >
+                <img id="pop4" class="allPops" src="../images/pop.png" >
+                <img id="pop5" class="allPops" src="../images/pop.png" >
+                <img id="pop6" class="allPops" src="../images/pop.png" >
+                <img id="pop7" class="allPops" src="../images/pop.png" >
+            </div>
+            <a href="https://www.google.com/drive/"><i class="fa-solid fa-thumbs-up"></i><i class="fa-solid fa-share-nodes"></i></a>
+            <script src="../java script/game2.js"></script>
+
+</body>
+
+</html>

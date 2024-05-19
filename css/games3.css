@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Varela+Round&display=swap');
+body{
+    background-image: url(../images/empty.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+div{
+    background-color: rgb(99, 235, 245);
+    height: 80vh;
+    width: 70%;
+    margin-top: 10vh;
+    margin-right: 15%;
+}
+div:hover{
+    box-shadow: 0 0  1rem 1.5rem rgba(142, 143, 142,0.5);
+}
+#img1{
+   height: 70vh;
+   margin-right: 70%;
+   margin-top: 5vh;
+}
+#img2{
+    margin-right: 10%;
+    height: 70vh;
+    margin-top: -150vh;
+}
+#home{
+    position: absolute;
+    top: 11vh;
+    right: 16vw;
+}
+
